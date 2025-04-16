@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniBeast - Anime Kategorileri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        header {
+            background-color: #222;
+            color: white;
+            padding: 5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 4rem;
+        }
+
+        header p {
+            font-size: 2rem;
+        }
+
+        .anime-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+        }
+        h2{
+            margin-bottom: 2rem;
+        }
+        .anime-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 30rem;
+        }
+
+        .anime-item {
+            background-color: #444;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+
+        .anime-item h3 {
+            font-size: 20px;
+            margin: 15px 0 10px;
+        }
+
+        .anime-item p {
+            font-size: 1.4rem;
+            color: #fff;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 850px) {
+            
+            .navbar .menu {
+                display: none;
+            }
+
+            .anime-list {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            .anime-item h3 {
+                font-size: 18px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+    <script src="script.js"></script>
+    <link rel="website icon" type="png" href="img/icon.jpg">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">AniBeast</div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="menu">
+            <a href="index.html">Anasayfa</a>
+            <a href="anime.html">Anime</a>
+            <a href="#">Movie</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="buttons">
+            <button class="sign-up">Üye Ol</button>
+            <button class="login">Giriş Yap</button>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Anasayfa</a>
+        <a href="anime.html">Anime</a>
+        <a href="#">Movie</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="sign-up">Üye Ol</a>
+        <a href="#" class="login">Giriş Yap</a>
+    </div>
+
+
+
+    <section>
+        <h2>Popüler Animeler</h2>
+        <div class="anime-list">
+            <div class="anime-item">
+                <img src="img/2.jpg" alt="Anime 1">
+                <h3>Weathering With You</h3>
+                <p>Gizemli bir hava olayının ardından, Tokyo'da genç bir kızın macerası...</p>
+            </div>
+
+            <div class="anime-item">
+                <img src="img/3.jpg" alt="Anime 2">
+                <h3>Howl's Moving Castle</h3>
+                <p>Sophie'nin büyülü bir dünyada yaşadığı macera...</p>
+            </div>
+
+            <div class="anime-item">
+                <img src="img/4.jpg" alt="Anime 3">
+                <h3>Your Name</h3>
+                <p>İki gencin beden değiştirdiği gizemli bir hikaye...</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Yeni Gelenler</h2>
+        <div class="anime-list">
+            <div class="anime-item">
+                <img src="img/7.jpeg" alt="Anime 4">
+                <h3>Suzume</h3>
+                <p>Bir kapı arayıcı ve doğal afetlerle savaşan bir kızın hikayesi...</p>
+            </div>
+
+            <div class="anime-item">
+                <img src="img/8.jpg" alt="Anime 5">
+                <h3>Belle</h3>
+                <p>Sanal dünyada bir şarkıcı olan Suzu'nun hikayesi...</p>
+            </div>
+
+            <div class="anime-item">
+                <img src="img/9.png" alt="Anime 6">
+                <h3>Koe No Katachi</h3>
+                <p>Bir gencin zorbalık sonrası yaşadığı duygusal değişim...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AniBeast. Tüm Hakları Saklıdır. Made By Yavuz Selim Gökdere</p>
+        <ul>
+            <li><a href="#">Gizlilik Politikası</a></li>
+            <li><a href="#">Hizmet Şartları</a></li>
+            <li><a href="#">Bize Ulaşın</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
