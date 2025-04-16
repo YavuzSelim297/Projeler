@@ -1,4 +1,3 @@
-// Rastgele tavsiyeleri ve numaralarını tutan bir dizi
 const adviceList = [
   { id: 1, text: "Kendine inan." },
   { id: 2, text: "Tutarlı olmayı öğren." },
@@ -103,20 +102,20 @@ const adviceList = [
 ];
 
   
-  // HTML elementlerini seçiyoruz
+ 
   const adviceNumber = document.getElementById("advice-number");
   const adviceText = document.getElementById("advice-text");
   const diceButton = document.getElementById("dice-button");
   
-  // Butona tıklanınca rastgele bir tavsiye seç
+ 
   diceButton.addEventListener("click", () => {
-    // Rastgele bir indeks oluştur
+    
     const randomIndex = Math.floor(Math.random() * adviceList.length);
     
-    // Rastgele tavsiyeyi seç
+   
     const randomAdvice = adviceList[randomIndex];
     
-    // HTML içeriğini güncelle
+    
     adviceNumber.textContent = `TAVSİYE #${randomAdvice.id}`;
     adviceText.textContent = `"${randomAdvice.text}"`;
   });
