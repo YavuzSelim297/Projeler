@@ -161,6 +161,7 @@ header .arkaplan {
     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
         url('img/berserk.jpg');
     background-size: cover;
+    background-position: top;
     width: 100%;
     height: 65rem;
     position: absolute;
@@ -208,12 +209,20 @@ section img {
     width: 100%;
 }
 
+
 section ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
     padding: 0;
+}
+.ul-hr{
+    width: 90%;
+    justify-self: center;
+}
+.ul-title{
+    font-size: 3rem;
 }
 
 section li {
@@ -269,16 +278,48 @@ footer ul li a:hover{
     html {
         font-size: 8px;
     }
+    section ul {
+        flex-direction: row;
+
+    }
+    section li {
+        max-width: 100%;
+        width: 48%;   
+        float: left;
+        margin: 1%;
+    }
+    
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 7px;
+    }
+    section ul { 
+        flex-direction: column;
+        display: flex;
+
+    }
+    section li {
+        max-width: 100%;
+        width: 100%;
+        float: left;
+    }
+    
+}
+@media (max-width:1150px){
     .menu, .buttons {
         display: none;
     }
     .hamburger {
         display: block;
     }
-    section ul {
-        flex-direction: column;
+}
+@media (min-width: 1151px) {
+    .hamburger {
+        display: none;
     }
-    section li {
-        max-width: 100%;
+    .mobile-menu {
+        display: none !important;
     }
 }
