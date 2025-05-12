@@ -9,12 +9,12 @@ function toggleMenu() {
 }
 
 function control() {
-    var isim  = document.getElementById("name").value.trim();
+    var isim = document.getElementById("name").value.trim();
     var email = document.getElementById("email").value.trim();
     var mesaj = document.getElementById("message").value.trim();
 
-    if (isim === "" || email === "" || mesaj === "") {
-        alert("Boş alan bırakmayınız!");
+    if (isim == "" || email == "" || mesaj == "") {
+        alert("Lütfen tüm alanları doldurun.");
         return;
     }
     document.getElementById("iletisimForm").submit();
@@ -25,18 +25,33 @@ function registerKontrol() {
     var eposta = document.getElementById("Eposta").value.trim();
     var sifre = document.getElementById("Sifre").value;
     var sifreTekrar = document.getElementById("SifreTekrar").value;
-  
+
     if (!kullaniciAdi || !eposta || !sifre || !sifreTekrar) {
-      alert("Lütfen tüm alanları doldurun.");
-      return;
+        alert("Lütfen tüm alanları doldurun.");
+        return;
     }
-  
-    if (sifre !== sifreTekrar) {
-      alert("Şifreler uyuşmuyor.");
-      return;
+
+    if (sifre != sifreTekrar) {
+        alert("Şifreler uyuşmuyor.");
+        return;
     }
-  
+
     alert("Kayıt başarılı!");
     document.getElementById("registerForm").submit();
-    window.location.href="index.html"
-  }
+    window.location.href = "index.html"
+}
+
+function loginKontrol() {
+    var Eposta = document.getElementById("E-posta").value;
+    var Sifre = document.getElementById("Sifre").value;
+
+    if (Eposta == "" || Sifre == "") {
+        alert("Lütfen tüm alanları doldurun.");
+        return;
+    }
+    alert("Kullanıcı girişi başarılı!");
+    document.getElementById("loginForm").submit();
+    window.location.href = "index.html"
+
+
+}
