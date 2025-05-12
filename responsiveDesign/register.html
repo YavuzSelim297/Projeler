@@ -159,17 +159,22 @@
     </div>
 
     <div class="wrapper">
-            <h1>Giriş Yap</h1>
-            <p>Hesabına giriş yap</p>
-            <form id="loginForm">
+            <h1>Üye Olun</h1>
+            <p>Yeni hesap oluştur</p>
+            <form id="registerForm">
+                <label for="kullaniciAdi">Kullanıcı Adı</label>
+                <input type="text" id="kullaniciAdi" placeholder="Kullanıcı adınızı girin">
 
-                <label for="E-posta">E-posta</label>
-                <input type="email" id="E-posta" placeholder="E-posta adresinizi girin">
+                <label for="Eposta">E-posta</label>
+                <input type="email" id="Eposta" placeholder="E-posta adresinizi girin">
 
-                <label for="Sifre">Şifre</label>
-                <input type="password" id="Sifre" placeholder="Şifrenizi giriniz">
+                <label for="Sifre">Şifre Belirle</label>
+                <input type="password" id="Sifre" placeholder="Şifrenizi belirleyin">
 
-                <button type="button" onclick="loginKontrol()">Giriş Yap</button>
+                <label for="SifreTekrar">Şifreyi Tekrar Gir</label>
+                <input type="password" id="SifreTekrar" placeholder="Şifreyi tekrar girin">
+
+                <button type="button" onclick="registerKontrol()">Hesap Oluştur</button>
             </form>
     </div>
 
